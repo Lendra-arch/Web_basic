@@ -24,9 +24,10 @@
         }
         else{
             $login_msg = "Akun Tidak Ditemukan.";
-        }
+            echo '<script>alert("Akun Tidak Ditemukan")</script>';
         $conn ->close();
 }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -34,11 +35,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <?php include "layout/header.html" ?>
-    <h3> MASuK AKUN</h3>
+    <h3> MASUK AKUN</h3>
     <i><?= $login_msg ?></i>
     <form action="login.php" method="POST">
         <input type="text" placeholder="username" name="username"/>
